@@ -1,0 +1,181 @@
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Шапка и логотип */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #FF6600;
+}
+
+.logo-container {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+/* Навигация */
+.nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    background-color: #FF6600;
+    margin: 0;
+}
+
+.nav li {
+    margin: 0 15px;
+}
+
+.nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* Основной контейнер визитки */
+.business-card .card-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #E6EBF1;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Основная информация */
+.business-card h1 {
+    font-size: 28px;
+    color: #333333;
+    margin: 10px 0;
+}
+
+.business-card h2 {
+    font-size: 20px;
+    color: #555555;
+    margin: 10px 0 20px 0;
+}
+
+.business-card .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Достижения */
+.business-card h3 {
+    font-size: 22px;
+    color: #FF6600;
+    margin: 20px 0 10px;
+}
+
+.business-card .achievements {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.business-card .achievements li {
+    font-size: 16px;
+    color: #333333;
+    margin: 5px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.business-card .achievements li:before {
+    content: "•";
+    color: #FF6600;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Фотогалерея */
+.photo-gallery img, .business-card .profile-photo {
+    width: auto; /* Убираем фиксированную ширину */
+    max-width: 100%; /* Изображение не будет выходить за пределы контейнера */
+    height: auto; /* Сохраняем пропорции изображения */
+    display: block;
+    margin: 0 auto; /* Центрируем изображение */
+    border-radius: 5px; /* Оставляем округление для красоты */
+    border: 1px solid #CCCCCC; /* Рамка вокруг изображений */
+}
+
+
+/* Адаптивный дизайн */
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    .business-card .card-container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .business-card h1 {
+        font-size: 24px;
+    }
+
+    .business-card h2 {
+        font-size: 18px;
+    }
+
+    .business-card .achievements {
+        padding-left: 10px;
+    }
+
+    .photo-gallery img {
+        width: 100px;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav a {
+        font-size: 14px;
+    }
+
+    .business-card h1 {
+        font-size: 20px;
+    }
+
+    .business-card h2 {
+        font-size: 16px;
+    }
+
+    .business-card .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .photo-gallery img {
+        width: 80px;
+    }
+}
+
